@@ -1,10 +1,15 @@
 # My App
 
+
 ## Description
 
+
 ## What is Node.js?
+Node.js is a open source JavaScript environment for easily building fast and scalable network applications. It's a platform for excuting JavaScript code to the server-side. It also lets developers use JavaScript to write command lines (for the terminal). 
+
 
 ## What is Express?
+Express is a popular framework for Node.js that provides a set of features for making applications.
 
 ## The Dark Sky API
 
