@@ -11,6 +11,8 @@ Node.js is a open source JavaScript environment for easily building fast and sca
 ## What is Express?
 Express is a popular framework for Node.js that provides a set of features for making applications.
 
+## Important commands for the terminal
+
 ## The Dark Sky API
 
 ## Learning goals
