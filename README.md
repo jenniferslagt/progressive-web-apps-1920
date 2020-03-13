@@ -3,6 +3,8 @@
 
 ## Description
 
+## Progressive Enhancement
+
 
 ## What is Node.js?
 Node.js is a open source JavaScript environment for easily building fast and scalable network applications. It's a platform for excuting JavaScript code to the server-side. It also lets developers use JavaScript to write command lines (for the terminal). 
