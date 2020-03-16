@@ -2,9 +2,10 @@
 
 
 ## Description
+I made a server-side app in Node.js with the Express framework. I requested data from the Dark Sky API and rendered this on my pages via the EJS templates. 
 
 ## Progressive Enhancement
-
+Progressive Enhancement (PE), 
 
 ## What is Node.js?
 Node.js is a open source JavaScript environment for easily building fast and scalable network applications. It's a platform for excuting JavaScript code to the server-side. It also lets developers use JavaScript to write command lines (for the terminal). 
@@ -16,6 +17,9 @@ You can also control your latest version of npm or node by running:
 
 ## What is Express?
 Express is a popular framework for Node.js that provides a set of features for making applications.
+- It's a fast framework for Node.js
+- It's server-side (or back-end)
+- It makes handling requests simple with less code
 
 ### How to install Express?
 You can install Express via your Terminal by running:
