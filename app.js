@@ -9,26 +9,37 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-// solve the Promise with .then
-const data = darkSkyData.getData()
-    .then(function (results) {
-        // console.log(data)
-        return data
-    });
+// set a static folder 
+app.use(express.static(path.join(__dirname, "public")));
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
+    const data = await darkSkyData.getData()
+
     res.render('index', {
-        data
+        timezone: data.timezone,
+        summary: data.currently.summary
     });
 
 });
 
-// set a static folder 
-app.use(express.static(path.join(__dirname, "public")));
+
+app.get('/details', async (req, res) => {
+    const data = await darkSkyData.getData()
+    console.log('daaataa', data)
+    res.render('details', {
+        timezone: data.timezone,
+        summary: data.currently.summary,
+        // temperature: data.currenly.temperature
+    });
+
+});
 
 
-// .send is a method which gets send to the webpage. U can put html within it.
-app.get('/', function (req, res) {
-    res.send('HALLOOOOTJES')
-    console.log("hain")
-})
+
+
+
+// // .send is a method which gets send to the webpage. U can put html within it.
+// app.get('/', function (req, res) {
+//     res.send('HALLOOOOTJES')
+//     console.log("hain")
+// })

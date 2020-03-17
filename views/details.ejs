@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="manifest" href="./manifest.json" crossorigin="use-credentials">
     <title>Details</title>
 </head>
 
 <body>
+    <%- include ('partials/header.ejs') %>
+
     <h1><%=timezone%></h1>
+    <p>Weather at this moment: <%=summary%></p>
+
+    <a href="/">back</a>
+
+    <%- include ('partials/footer.ejs') %>
 </body>
 
 </html>
