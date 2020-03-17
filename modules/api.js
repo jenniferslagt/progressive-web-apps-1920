@@ -13,15 +13,19 @@ async function getData() {
             // console.log('data:', results.currently)
             return results
         })
-    return results
+    return data
     // .catch(err => {
     //     console.log('it doesnt work')
     // })
 
 }
-getData();
 
-console.log('whatthehellisthis', getData)
+// getData().then(function (result) {
+//     console.log('whut?', result)
+// });
+
+
+
 
 module.exports = {
     getData
