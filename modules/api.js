@@ -15,9 +15,9 @@ async function getData() {
             return results
         })
     return data
-    // .catch(err => {
-    //     console.log('it doesnt work')
-    // })
+        .catch(err => {
+            console.log('it doesnt work')
+        })
 
 }
 
