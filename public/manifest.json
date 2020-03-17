@@ -3,18 +3,18 @@
     "name": "Is the weather good for surfing?",
     "description": "Weather forecast information",
     "icons": [{
-            "src": "./public/images/surf.png",
+            "src": "/images/surf.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "./public/images/waves.png",
+            "src": "/images/waves.png",
             "type": "image/png",
             "sizes": "512x512"
         }
     ],
     "start_url": "/",
-    "background_color": "ligtblue",
+    "background_color": "#FFFFFF",
     "display": "fullscreen",
     "scope": "/",
     "theme_color": "#3367D6"

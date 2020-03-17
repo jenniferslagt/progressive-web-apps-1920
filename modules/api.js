@@ -5,8 +5,7 @@ async function getData() {
     const long = '4.9597356'
     const api = `https://api.darksky.net/forecast/21282b7046eefae6d54cf3fa0cf9d8bc/${lat},${long}`; // first number is latitude and the second is longitude
 
-    const data = await fetch(api)
-    console.log('requesting data')
+    const data = fetch(api)
         .then(response => {
             return response.json();
         })
