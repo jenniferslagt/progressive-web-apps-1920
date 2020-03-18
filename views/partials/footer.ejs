@@ -1,3 +1,15 @@
 <footer>
     <h1>footer</h1>
 </footer>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker
+                .register('/service-worker.js') // Hier gaat het fout?
+                .then(function (registration) {
+                    return registration.update();
+                })
+                .catch(err => console.log(`Service Worker: Error ${err}`))
+        });
+    }
+</script>
