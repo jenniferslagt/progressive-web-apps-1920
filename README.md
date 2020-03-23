@@ -1,9 +1,3 @@
-# 3 zaken:
-1. Ik had nog wat problemen met het renderen van mijn data op de ejs templates. Het werkte niet omdat ik niet goed gewerkt had met de promise. Ik had hier wat struggles mee en heb toen hulp gevraagd aan Robin! Die heeft mij gelukkig kunnen helpen!
-2. Zouden jullie nog willen kijken naar mijn code en eventueel verbeteringen willen schrijven in mijn issues?  
-3. Ik moet nog kijken hoe ik deze app kan deployen via Heroku. Maar eerst wil ik dit weekend de service-worker af hebben. Ik hoop dat ik een beetje op schema loop, maar betwijfel het!  Wat denken jullie? Ik merk dat ik wat meer tijd nodig voor deze vakken.
-
-
 # My App
 
 
