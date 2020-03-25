@@ -1,0 +1,16 @@
+body {
+    background: yellow;
+
+}
+
+
+ul {
+    all: unset;
+    list-style-type: none;
+    margin-bottom: 600px;
+}
+
+ul li {
+    margin: 10px 50px 10px 0;
+    font-size: 18px;
+}

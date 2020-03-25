@@ -3,11 +3,11 @@ const cacheName = 'version-2';
 // Call install event to the service worker itself
 self.addEventListener('install', function (event) {
     // console.log('Service worker is installed')
-})
+});
 
 // Call the activate event
 self.addEventListener('activate', function (event) {
-    console.log('Service worker is actived')
+    console.log('Service worker is actived');
     // Remove any unwanted caches
     // loop through the caches with a condition
     event.waitUntil(
@@ -19,8 +19,8 @@ self.addEventListener('activate', function (event) {
                 })
             )
         })
-    )
-})
+    );
+});
 
 // Call Fetch event
 self.addEventListener('fetch', function (event) {
@@ -30,7 +30,8 @@ self.addEventListener('fetch', function (event) {
         .then(function (res) {
             // Make a copy / clone of the response of the server
             const resClone = res.clone();
-            caches.open(cacheName)
+            caches
+                .open(cacheName)
                 .then(function (cache) {
                     // Add the response to the cache
                     cache.put(event.request, resClone);
@@ -39,5 +40,5 @@ self.addEventListener('fetch', function (event) {
         })
         .catch(err => caches.match(event.request)
             .then(res => res))
-    )
-})
+    );
+});

@@ -1,22 +1,21 @@
 {
-  "short_name": "Surf weather",
-  "name": "Is the weather good for surfing?",
-  "description": "Weather forecast information",
-  "icons": [
-    {
-      "src": "/images/resized_surf_icon.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/images/resized_waves_icon.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "/",
-  "background_color": "#FFFFFF",
-  "display": "fullscreen",
-  "scope": "/",
-  "theme_color": "#3367D6"
+    "short_name": "Surf weather",
+    "name": "Surf weather app",
+    "description": "Weather forecast information",
+    "icons": [{
+            "src": "/images/resized_surf_icon.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/resized_waves_icon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#FFFFFF",
+    "display": "fullscreen",
+    "scope": "/",
+    "theme_color": "#3367D6"
 }
