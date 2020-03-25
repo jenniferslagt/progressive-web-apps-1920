@@ -3,12 +3,16 @@
 <%- include ('partials/head.ejs') %>
 
 <body>
-    <%- include ('partials/header.ejs') %>
-
-    <h1><%=timezone%></h1>
-    <p>Weather at this moment: <%=summary%></p>
-    <a href="/">back</a>
-
+    <section>
+        <h1><%=timezone%></h1>
+        <p>Currently: <%=summary%></p>
+        <ul>
+            <li>Windspeed: <%=windSpeed%></li>
+            <li>UV-index: <%=uvIndex%></li>
+            <li>Cloud cover: <%=cloudCover%></li>
+        </ul>
+        <a href="/">back</a>
+    </section>
     <%- include ('partials/footer.ejs') %>
 </body>
 

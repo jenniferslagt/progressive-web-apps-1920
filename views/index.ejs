@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <%- include ('partials/head.ejs') %>
 
 <body>
   <%- include ('partials/header.ejs') %>
 
-  <h1>Location: <%=timezone%></h1>
-  <h1>Summary: <%=summary%></h1>
-  <a href="/details">Bekijk</a>
+  <div class="main-content">
+    <h2>Popular spots</h2>
+    <% locations.forEach(location => { %>
+    <section>
+      <h3><%= location.timezone %></h3>
+      <img src="<%= location.background %>" />
+      <br />
+      <a href="/details/<%= location.lat %>/<%= location.long %>">Details</a>
+      <br />
+    </section>
+    <% }); %>
+  </div>
 
   <%- include ('partials/footer.ejs') %>
 </body>
