@@ -1,9 +1,12 @@
 const fetch = require('node-fetch');
+const dotenv = require('dotenv').config();
 
-async function getData() {
-    const lat = '52.4968262'
-    const long = '4.9597356'
-    const api = `https://api.darksky.net/forecast/21282b7046eefae6d54cf3fa0cf9d8bc/${lat},${long}`; // first number is latitude and the second is longitude
+async function getData(lat, long) {
+    const url = process.env.API_URL
+    const key = process.env.API_KEY
+    // const lat = process.env.API_LAT
+    // const long = process.env.API_LONG
+    const api = `${url}/${key}/${lat},${long}`; // first number is latitude and the second is longitude
 
     const data = fetch(api)
         .then(response => {
@@ -12,18 +15,12 @@ async function getData() {
         .then(results => {
             // console.log('data:', results.currently)
             return results
-        })
+        });
     return data
         .catch(err => {
             console.log('it doesnt work')
-        })
-
+        });
 }
-
-// getData().then(function (result) {
-//     console.log('whut?', result)
-// });
-
 
 
 
