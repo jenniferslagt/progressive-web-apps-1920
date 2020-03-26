@@ -2,7 +2,7 @@ const cacheName = 'version-2';
 
 // Call install event to the service worker itself
 self.addEventListener('install', function (event) {
-    // console.log('Service worker is installed')
+    // console.log('Service worker is installed');
 });
 
 // Call the activate event
@@ -38,7 +38,10 @@ self.addEventListener('fetch', function (event) {
                 });
             return res;
         })
-        .catch(err => caches.match(event.request)
-            .then(res => res))
+        .catch(function () {
+            console.log('je bent offline');
+        })
+        // .catch(err => caches.match(event.request)
+        //     .then(res => res))
     );
 });

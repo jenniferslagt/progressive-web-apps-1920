@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
-// const revManifest = require('./static/rev-manifest')
+const PORT = process.env.PORT || 5000;
+const locations = require('./modules/locations.json')
 
 const path = require('path');
 const darkSkyData = require('./modules/api.js');
@@ -14,9 +14,7 @@ app.set('views', 'views');
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get('/', async (req, res) => {
-    console.log('Getting the data..')
     const data = await darkSkyData.getData()
-    const locations = require('./modules/locations.json')
 
     res.render('index.ejs', {
         timezone: data.timezone,
@@ -29,9 +27,10 @@ app.get('/details/:lat/:long', async (req, res) => {
     const long = req.params.long;
 
     const data = await darkSkyData.getData(lat, long);
-    const locations = require('./modules/locations.json');
-
-    console.log('nu', data.currently)
+    // const locationName = locations.map(function (location) {
+    //     return location.timezone;
+    // })
+    // console.log('llocatienama', locationName)
 
     res.render('details', {
         timezone: data.timezone,
