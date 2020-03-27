@@ -26,12 +26,18 @@ app.get('/details/:lat/:long/:timezone', async (req, res) => {
     const lat = req.params.lat;
     const long = req.params.long;
     const timezone = req.params.timezone;
-    // const background = req.params.background;
+
+    const background = findTimeZoneInLocationsFile(timezone).background
+    // search for timezone in locations json
+    function findTimeZoneInLocationsFile(value) {
+        return locations.find(location => location.timezone === value)
+    }
 
     const data = await darkSkyData.getData(lat, long);
 
     res.render('details', {
         timezone: timezone,
+        background: background,
         summary: data.currently.summary,
         temperature: data.currently.temperature,
         windSpeed: data.currently.windSpeed,
