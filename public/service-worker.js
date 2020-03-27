@@ -38,10 +38,7 @@ self.addEventListener('fetch', function (event) {
                 });
             return res;
         })
-        .catch(function () {
-            console.log('je bent offline');
-        })
-        // .catch(err => caches.match(event.request)
-        //     .then(res => res))
+        .catch(err => caches.match(event.request)
+            .then(res => res))
     );
 });

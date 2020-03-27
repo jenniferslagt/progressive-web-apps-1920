@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
     "cleancss": "cleancss -o min.main.css ./public/css/main.css && cleancss -o min.detail.css ./public/css/detail.css",
-    "compress": "bread-compressor dist"
+    "compress": "bread-compressor public && bread-compressor modules"
   },
   "author": "",
   "license": "ISC",

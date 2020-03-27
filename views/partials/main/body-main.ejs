@@ -1,0 +1,17 @@
+<body>
+    <%- include ('../header.ejs') %>
+
+    <div class="main-content">
+        <h2>Popular spots</h2>
+        <% locations.forEach(location => { %>
+        <section>
+            <h3><%= location.timezone %></h3>
+            <img src="<%= location.background %>" />
+            <br />
+            <a href="/details/<%= location.lat %>/<%= location.long %>/<%= location.timezone %>">Details</a>
+            <br />
+        </section>
+        <% }); %>
+    </div>
+
+</body>

@@ -22,18 +22,16 @@ app.get('/', async (req, res) => {
     });
 });
 
-app.get('/details/:lat/:long', async (req, res) => {
+app.get('/details/:lat/:long/:timezone', async (req, res) => {
     const lat = req.params.lat;
     const long = req.params.long;
+    const timezone = req.params.timezone;
+    // const background = req.params.background;
 
     const data = await darkSkyData.getData(lat, long);
-    // const locationName = locations.map(function (location) {
-    //     return location.timezone;
-    // })
-    // console.log('llocatienama', locationName)
 
     res.render('details', {
-        timezone: data.timezone,
+        timezone: timezone,
         summary: data.currently.summary,
         temperature: data.currently.temperature,
         windSpeed: data.currently.windSpeed,
