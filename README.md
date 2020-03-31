@@ -38,7 +38,7 @@ The Dark Sky API allows you to look up the weather anywhere on the globe, return
 I understand the difference between a client-side rendering and server-side. I understand how a service worker works and how criticial rendering works.
 
 * Client-side rendering VS Server-side rendering: 
-- Client-side rendered apps are rendering pages directly in the browsers by using JavaScript. Server-side rendered apps are running their code on a web server (before it's sent to the client). 
+-Client-side rendered apps are rendering pages directly in the browsers by using JavaScript. Server-side rendered apps are running their code on a web server (before it's sent to the client). 
 - Client-side development is more about interactively and displaying data (for example, adding a event to a button), while server-side is more about working behind the scene to manage data (for example, which data is rendered on which page).
 - Client-side rendered apps are actually downloading all the files to your browser and then it executes that. So the site is'nt rendered until all the content is downloaded. Server-side rendered apps are rendering the entire page and then deliver the full page. 
 - If you navigate to another page, client-side rendered apps are is going to the work all over again (download files and deliver it to the HTML). Server-side rendered apps are fetching only neccesary data. In short: client-side rendered apps are doing more "trips" to the server to get the data.
