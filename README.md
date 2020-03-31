@@ -37,23 +37,28 @@ The Dark Sky API allows you to look up the weather anywhere on the globe, return
 ## Conclusions <br>
 I understand the difference between a client-side rendering and server-side. I understand how a service worker works and how criticial rendering works.
 
-* Client-side rendering VS Server-side rendering: 
--Client-side rendered apps are rendering pages directly in the browsers by using JavaScript. Server-side rendered apps are running their code on a web server (before it's sent to the client). 
-- Client-side development is more about interactively and displaying data (for example, adding a event to a button), while server-side is more about working behind the scene to manage data (for example, which data is rendered on which page).
-- Client-side rendered apps are actually downloading all the files to your browser and then it executes that. So the site is'nt rendered until all the content is downloaded. Server-side rendered apps are rendering the entire page and then deliver the full page. 
-- If you navigate to another page, client-side rendered apps are is going to the work all over again (download files and deliver it to the HTML). Server-side rendered apps are fetching only neccesary data. In short: client-side rendered apps are doing more "trips" to the server to get the data.
-- Server-side rendered apps are therefore faster than client side rendered apps, because they make less "trips" to the server.
-- It's CEO friendly (Google can "read" JavaScript). But server-side rendered apps are working better with the SEO.
+* Client-side rendering VS Server-side rendering: <br>
+-Client-side rendered apps are rendering pages directly in the browsers by using JavaScript. Server-side rendered apps are running their code on a web server (before it's sent to the client). <br>
+-Client-side development is more about interactively and displaying data (for example, adding a event to a button), while server-side is more about working behind the scene to manage data (for example, which data is rendered on which page).
+-Client-side rendered apps are actually downloading all the files to your browser and then it executes that. So the site is'nt rendered until all the content is downloaded. Server-side rendered apps are rendering the entire page and then deliver the full page. <br>
+-If you navigate to another page, client-side rendered apps are is going to the work all over again (download files and deliver it to the HTML). Server-side rendered apps are fetching only neccesary data. In short: client-side rendered apps are doing more "trips" to the server to get the data. <br>
+-Server-side rendered apps are therefore faster than client side rendered apps, because they make less "trips" to the server. <br>
+-It's CEO friendly (Google can "read" JavaScript). But server-side rendered apps are working better with the SEO. <br>
 
-* A service worker
-- A service worker is a JavaScript file (service-worker.js) that runs seperately from the browser. It's a type of webworker.
-- It intercepts the network requests, it "saves" or retrieves data in the cache storage and it can deliver push messages. I used it to save the whole (!) request (at the first view of a page) in the cache storage. 
-- If you visit this page the second time, the saved data (of the request) is going to use to render this on the page. In this way, the request to the network is intercepted, because it's already saved on the cache storage! 
-- So actually they can make your app work offline! For example, if you visit a page for the second time.
-- If I (a webdeveloper) update a page and an user has no network, it will show the "old" version of the page which is saved in the cache storage. But I the networks works, the data in the cache storage is also getting updated to newer version.
-- Before installing this, you have to register your service worker. 
+* A service worker <br>
+-A service worker is a JavaScript file (service-worker.js) that runs seperately from the browser. It's a type of webworker. <br>
+-It intercepts the network requests, it "saves" or retrieves data in the cache storage and it can deliver push messages. I used it to save the whole (!) request (at the first view of a page) in the cache storage.  <br>
+-If you visit this page the second time, the saved data (of the request) is going to use to render this on the page. In this way, the request to the network is intercepted, because it's already saved on the cache storage! 
+- So actually they can make your app work offline! For example, if you visit a page for the second time. <br>
+-If I (a webdeveloper) update a page and an user has no network, it will show the "old" version of the page which is saved in the cache storage. But I the networks works, the data in the cache storage is also getting updated to newer version. you can check this on my application by inspecting the page and then go to application. On the left side you'll see the service-worker and the cache storage. <br>
+-Before installing this, you have to register your service worker. 
 
-* Criticial rendering
+* Criticial rendering <br>
+-The criticial rendering path is what happens in the steps between receiving the HTML, CSS, and the JavaScript and the process to render this on the page.<br>
+-By optimizing this path you can improve the time of rendering the page by the first view. In this way, you can show you rendered content in parts, instead of waiting untill everything is downloaded. I did this by minifying and compressing my code by using some npm packages. <br>
+A visual presentation of (optimizing) rendering a page:
+
+"Optimizing the critical rendering path refers to prioritizing the display of content that relates to the current user action" - Ilya Grigorik. 
 
 ## Learning goals
 I've learned a lot in the past three weeks:
@@ -62,7 +67,8 @@ I've learned a lot in the past three weeks:
 
 
 ## Credits
-I would link to thank my fellow students, the help students and the teachers for helping me during the past three weeks. 
+In the past weeks we all worked from home, because of the virus. This makes it harder to communicate and to concentrate on your work.
+That's why I would like to thank my fellow students, the help students and the teachers for helping me during this time. 
 
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
