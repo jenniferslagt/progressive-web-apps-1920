@@ -48,8 +48,8 @@ I understand the difference between a client-side rendering and server-side. I u
 * A service worker <br>
 -A service worker is a JavaScript file (service-worker.js) that runs seperately from the browser. It's a type of webworker. <br>
 -It intercepts the network requests, it "saves" or retrieves data in the cache storage and it can deliver push messages. I used it to save the whole (!) request (at the first view of a page) in the cache storage.  <br>
--If you visit this page the second time, the saved data (of the request) is going to use to render this on the page. In this way, the request to the network is intercepted, because it's already saved on the cache storage! 
-- So actually they can make your app work offline! For example, if you visit a page for the second time. <br>
+-If you visit this page the second time, the saved data (of the request) is going to use to render this on the page. In this way, the request to the network is intercepted, because it's already saved on the cache storage! <br>
+-So actually they can make your app work offline! For example, if you visit a page for the second time. <br>
 -If I (a webdeveloper) update a page and an user has no network, it will show the "old" version of the page which is saved in the cache storage. But I the networks works, the data in the cache storage is also getting updated to newer version. you can check this on my application by inspecting the page and then go to application. On the left side you'll see the service-worker and the cache storage. <br>
 -Before installing this, you have to register your service worker. 
 
@@ -57,11 +57,9 @@ I understand the difference between a client-side rendering and server-side. I u
 -The criticial rendering path is what happens in the steps between receiving the HTML, CSS, and the JavaScript and the process to render this on the page.<br>
 -By optimizing this path you can improve the time of rendering the page by the first view. In this way, you can show you rendered content in parts, instead of waiting untill everything is downloaded. I did this by minifying and compressing my code by using some npm packages. <br>
 A visual presentation of (optimizing) rendering a page:
-
+![progressive-rendering](https://user-images.githubusercontent.com/45489420/78039935-04f5c080-736f-11ea-9dc8-32aab7b8359f.png)
 "Optimizing the critical rendering path refers to prioritizing the display of content that relates to the current user action" - Ilya Grigorik. 
 
-## Learning goals
-I've learned a lot in the past three weeks:
 
 ## Sources
 
