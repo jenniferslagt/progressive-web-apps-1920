@@ -57,12 +57,17 @@ I understand the difference between a client-side rendering and server-side. I u
 -The criticial rendering path is what happens in the steps between receiving the HTML, CSS, and the JavaScript and the process to render this on the page.<br>
 -By optimizing this path you can improve the time of rendering the page by the first view. In this way, you can show you rendered content in parts, instead of waiting untill everything is downloaded. I did this by minifying and compressing my code by using some npm packages. <br>
 A visual presentation of (optimizing) rendering a page:
-![progressive-rendering](https://user-images.githubusercontent.com/45489420/78039935-04f5c080-736f-11ea-9dc8-32aab7b8359f.png)
+![progressive-rendering](https://user-images.githubusercontent.com/45489420/78039935-04f5c080-736f-11ea-9dc8-32aab7b8359f.png) <br>
 "Optimizing the critical rendering path refers to prioritizing the display of content that relates to the current user action" - Ilya Grigorik. 
 
 
 ## Sources
-
+- [Node.js Tutorial for Beginners: Learn Node in 1 Hour | Mosh](https://www.youtube.com/watch?v=TlB_eWDSMt4) <br>
+[Express JS Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE) <br>
+- [Intro To Service Workers & Caching](https://www.youtube.com/watch?v=ksXwaWHCW6k)  <br>
+- [Client Side Rendering vs Server Side Rendering](https://dev.to/akhilaariyachandra/client-side-rendering-vs-server-side-rendering-2o4o/comments) <br>
+- [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers)  <br>
+- [Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path) <br>
 
 ## Credits
 In the past weeks we all worked from home, because of the virus. This makes it harder to communicate and to concentrate on your work.
